@@ -12,6 +12,33 @@
 <script>
   window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
+  const recognition = new SpeechRecognition();
+  recognition.interimResults = true; // this line allows the speech to text to run before you stop speaking
+
+  let p = document.createElement('p');
+  const words = document.querySelector('.words');
+  words.appendChild(p);
+
+  recognition.addEventListener('result', e => {
+    const transcript = Array.from(e.results)
+      .map(result => result[0])
+      .map(result => result.transcript)
+      .join('')
+
+      p.textContent = transcript;
+      if (e.results[0].isFinal) {
+        p = document.createElement('p');
+        words.appendChild(p);
+      }
+      if (transcript.includes('get the weather')) {
+        console.log("getting the weather function!!")
+      }
+    console.log(transcript);
+  });
+
+  recognition.addEventListener('end', recognition.start); //this line of code so that it starts listening again after a break in speech
+
+  recognition.start();
 
 </script>
 
