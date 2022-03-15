@@ -1,0 +1,22 @@
+{
+  "name": "gum",
+  "version": "1.0.0",
+  "description": "JS30 workbook",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sfcalico/JS30.git"
+  },
+  "author": "Cullen REDDY",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sfcalico/JS30/issues"
+  },
+  "homepage": "https://github.com/sfcalico/JS30#readme",
+  "dependencies": {
+    "browser-sync": "^2.27.7"
+  }
+}
