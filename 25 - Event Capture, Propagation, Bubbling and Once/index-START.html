@@ -42,7 +42,18 @@
 
 <button></button>
 <script>
+  const divs = document.querySelectorAll('div');
 
+  function logText(e) {
+    console.log(this.classList.value);
+    // e.stopPropagation(); // stop bubbling
+  }
+
+  
+  divs.forEach(div => div.addEventListener('click', logText, 
+  {capture: false, // false is default; events bubble up
+    once: true})); // will unbind an EventListener after the first click or action such as with store checkouts or purchase buttons
+  
 </script>
 </body>
 </html>
