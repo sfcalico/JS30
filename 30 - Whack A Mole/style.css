@@ -20,6 +20,11 @@ h1 {
   line-height: 1;
   margin-bottom: 0;
 }
+button {
+  margin-left: 3em;
+  border-radius: 5px;
+  font-size: xx-large;
+}
 
 .score {
   background: rgba(255,255,255,0.2);
